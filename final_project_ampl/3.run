@@ -1,0 +1,20 @@
+reset;
+
+model problem.mod;
+
+data problem.dat;
+
+
+option solver cplex;
+
+#expand #delay_constraints_3;
+		#load_value,
+		#delay_constraints_1,
+		#delay_constraints_2,
+		
+		#delay_constraints_4,
+		#delay_constraints_5;
+
+solve;
+
+display x,y,MinLinkCost;
