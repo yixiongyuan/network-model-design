@@ -16,7 +16,6 @@ public class Tree {
     double streamRate;
 
     // every level every child node
-    // 每一层 一个list 存放这一层的node index
     List<List<Integer>> levelList;
 
     public Tree(int index,int root, int level,double streamRate) {

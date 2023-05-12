@@ -40,6 +40,7 @@ public class Node {
         this.index = index;
 
         //随机初始化 background transfer
+
         this.a = r.nextInt(512)+512;
         this.b = r.nextInt(64) + 64;
 
@@ -58,6 +59,27 @@ public class Node {
         for(int i = 0;i<TreeInTotal;i++){
             childList.add(new LinkedList<>());
         }
+
+        nextLinkRatio = 0;
+    }
+
+    public void refresh(int TreeInTotal){
+
+        // refresh the building property
+        // keep the same background transfer
+
+        this.downRemain = 0;
+        this.upRemain = 0;
+
+        // default -1 not connected
+        this.connectToTree = new int[TreeInTotal];
+        Arrays.fill(connectToTree, -1);
+
+        linkIndex=0;
+
+        //child list all empty
+        this.childList = new LinkedList<>();
+        for(int i = 0;i<TreeInTotal;i++){childList.add(new LinkedList<>());}
 
         nextLinkRatio = 0;
     }
