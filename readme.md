@@ -28,14 +28,14 @@ Reproduce heuristic algorithm and AMPL code for P2P Multicasting Network Design 
 -   Import java src code
 -   Setup TreeNum（default as 1）, Tree level (default as 2), totalRate (Streaming rate)
 
-![setup](../../../documents/snipaste temporary images/setup.png)
+![setup](./github_img/setup.png)
 
 -   Get result from the heuristic model with its randomly generated network(nodes, links)
 -   Copy generate node data into problem.dat file, modify Stream rate(sr) based on the result.
-    ![image-20230515175923854](../../../documents/snipaste temporary images/image-20230515175923854.png)
+    ![setup_ampl](./github_img/setup_ampl.png)
 -   run "include 3.run;" in ampl mode, get ampl result
 
-![ampl_result](../../../documents/snipaste temporary images/ampl_result.png)
+![ampl_result](./github_img/ampl_result.png)
 
 ```bash
 ./ampl
