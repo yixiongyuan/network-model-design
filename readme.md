@@ -31,6 +31,7 @@ Reproduce heuristic algorithm and AMPL code for P2P Multicasting Network Design 
 ![setup](./github_img/setup.png)
 
 -   Get result from the heuristic model with its randomly generated network(nodes, links)
+![java_generated_data](./github_img/java_generated_data.png)
 -   Copy generate node data into problem.dat file, modify Stream rate(sr) based on the result.
     ![setup_ampl](./github_img/setup_ampl.png)
 -   run "include 3.run;" in ampl mode, get ampl result
