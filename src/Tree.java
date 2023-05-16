@@ -4,18 +4,19 @@ import java.util.List;
 // 每一颗树 用一个类实例表示
 public class Tree {
 
+    //tree index
     int index;
 
-    // 根节点的 index
+    // index of root node
     int root;
 
-    // number of node connected
+    // number of node connected to it
     int count;
 
 
     double streamRate;
 
-    // every level every child node
+    // In one tree every level has a list of nodes
     List<List<Integer>> levelList;
 
     public Tree(int index,int root, int level,double streamRate) {
@@ -24,12 +25,14 @@ public class Tree {
         this.root = root;
 
         this.streamRate = streamRate;
+        //default root node
         this.count = 1;
 
         levelList = new LinkedList<>();
         for(int i = 0;i<=level;i++){
             levelList.add(new LinkedList<>());
         }
+
         levelList.get(0).add(root);
 
     }

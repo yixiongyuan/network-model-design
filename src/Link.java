@@ -1,5 +1,7 @@
 public class Link {
 
+
+    //basic property
     int download;
     int upload;
     int cost;

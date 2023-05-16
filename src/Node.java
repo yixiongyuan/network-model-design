@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Node {
 
+    //random seed for generating node
     private  static Random r = new Random();
 
     int index;
@@ -10,25 +11,24 @@ public class Node {
     double b; // upload background transfer
 
 
-    // 剩余上传/下载空间
+    // remaining capacity
     double downRemain;
     double upRemain;
 
-    //是否是根节点
     boolean ifRoot;
 
 
-    //可用的link列表 和 当前使用的link index
+
     Link[] accessLinkList;
+    //current used link index
     int linkIndex;
 
     // -1 means didn't connect
     // >=0 means level
-    // int[3] = 4 代表当前结点 连接在index为3的树的4层
+    // int[3] = 4 represent this node connected to index 3 tree in level 4
     int[] connectToTree;
 
-    // every tree every child node
-    // 当前结点 在每一个棵树中的 子结点有哪些
+    // in every tree a node has a list of child node
     List<List<Integer>> childList;
 
     // 下一个增长的link 性价比
@@ -39,7 +39,7 @@ public class Node {
 
         this.index = index;
 
-        //随机初始化 background transfer
+        //random initialization background transfer
 
         this.a = r.nextInt(512)+512;
         this.b = r.nextInt(64) + 64;
@@ -49,6 +49,7 @@ public class Node {
 
         ifRoot = false;
 
+        // -1 means not connected to tree
         this.connectToTree = new int[TreeInTotal];
         Arrays.fill(connectToTree, -1);
 
